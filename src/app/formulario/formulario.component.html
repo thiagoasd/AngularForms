@@ -1,0 +1,15 @@
+<p>formulario works!</p>
+<form (submit)="onSubmit()" #formAutor="ngForm">
+  <input type="text" id="Nome" name="Nome" [(ngModel)]="contato.nome" required maxlength="4" #autor="ngModel"
+    placeholder="Seu nome">
+  <br>
+
+  <label *ngIf="autor.invalid && (autor.touched || autor.dirty)"> Campo invalido</label>
+  <label *ngIf="autor.errors ?.required"> Campo obrigatorio 2</label>
+  <label *ngIf="autor.errors ?.maxlength"> Campo obrigatorio 3</label>
+  <br>
+  <input type="email" id="Email" name="Email" [(ngModel)]="contato.email" placeholder="Seu email">
+  <br>
+  <br>
+  <button type="submit" [disabled]="formAutor.invalid">Enviar</button>
+</form>

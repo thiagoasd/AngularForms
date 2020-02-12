@@ -296,6 +296,12 @@
 </style>
 
 <!-- Toolbar -->
+
+<div class='content' role="main">
+<a routerLink="/form">Form</a>
+<router-outlet></router-outlet>
+
+</div>
 <div class="toolbar" role="banner">
   <img
     width="40"
@@ -410,13 +416,14 @@
   </div>
 
   <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>ng generate component xyz</pre>
-      <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-      <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-      <pre *ngSwitchCase="'dependency'">ng add _____</pre>
-      <pre *ngSwitchCase="'test'">ng test</pre>
-      <pre *ngSwitchCase="'build'">ng build --prod</pre>
+  <div class="terminal">
+    <PRE><app-formulario></app-formulario>></PRE>
+  </div>
+
+  <br>
+
+  <div class="terminal">
+    <PRE><app-listagem></app-listagem></PRE>
   </div>
 
   <!-- Links -->

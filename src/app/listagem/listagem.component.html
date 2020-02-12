@@ -1,0 +1,17 @@
+<p>listagem works!</p>
+<table>
+  <thead>
+    <tr>
+      <td>Nome</td>
+      <td>Email</td>
+    </tr>
+
+  </thead>
+  <tr *ngFor="let contato of contatos">
+    <td>{{contato.nome}}</td>
+    <td>{{contato.email}}</td>
+  </tr>
+
+
+</table>
+<button (click)="carregaGrid()">carregaGrid</button>
